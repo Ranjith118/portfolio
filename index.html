@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranjith - SOFTWARE DEVELOPER</title>
+    <title>Ranjith - Software Developer</title>
     <style>
         * {
             margin: 0;
@@ -191,12 +191,12 @@
             border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero Section - Increased spacing from navbar */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 100px;
+            padding-top: 160px; /* Increased from 100px to 160px */
             position: relative;
         }
 
@@ -206,6 +206,7 @@
             gap: 6rem;
             align-items: center;
             width: 100%;
+            margin-top: 60px; /* Increased from 0 to 60px */
         }
 
         .hero-text h1 {
@@ -514,33 +515,39 @@
             gap: 15px;
         }
 
+        .skill-item {
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.3);
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-item:hover {
+            background: rgba(0, 212, 170, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 170, 0.2);
+        }
+
         .skill-logo {
             width: 40px;
             height: 40px;
             object-fit: contain;
             transition: all 0.3s ease;
-            /* Remove the problematic filter that was making logos white */
         }
 
         .skill-item:hover .skill-logo {
             transform: scale(1.1);
-            /* Remove the color-changing filter on hover */
-        }
-
-        /* Add specific styling for logos that need better visibility */
-        .skill-item[data-skill="html"] .skill-logo,
-        .skill-item[data-skill="css"] .skill-logo,
-        .skill-item[data-skill="javascript"] .skill-logo {
-            /* These logos have good contrast already */
         }
 
         .skill-item[data-skill="github"] .skill-logo {
-            /* GitHub logo might need slight adjustment for dark theme */
             filter: brightness(1.2);
-        }
-
-        .skill-item[data-skill="vscode"] .skill-logo {
-            /* VS Code logo should be fine as-is */
         }
 
         .skill-item .skill-name {
@@ -682,7 +689,6 @@
             position: relative;
         }
 
-        /* Server rack */
         .icon-backend::before {
             content: '';
             position: absolute;
@@ -695,7 +701,6 @@
             background: rgba(0, 212, 170, 0.05);
         }
 
-        /* Server layers */
         .icon-backend .server-layer1 {
             position: absolute;
             width: 35px;
@@ -729,7 +734,6 @@
             z-index: 2;
         }
 
-        /* Server indicators */
         .icon-backend .indicator1 {
             position: absolute;
             width: 4px;
@@ -763,7 +767,6 @@
             z-index: 3;
         }
 
-        /* Connection lines */
         .icon-backend::after {
             content: '';
             position: absolute;
@@ -780,7 +783,6 @@
             position: relative;
         }
 
-        /* Main artboard/canvas */
         .icon-ui::before {
             content: '';
             position: absolute;
@@ -793,7 +795,6 @@
             background: rgba(0, 212, 170, 0.05);
         }
 
-        /* Design elements inside canvas */
         .icon-ui .design-element1 {
             position: absolute;
             width: 20px;
@@ -838,7 +839,6 @@
             z-index: 2;
         }
 
-        /* Design tool cursor */
         .icon-ui::after {
             content: '';
             position: absolute;
@@ -853,7 +853,6 @@
             transform: rotate(-30deg);
         }
 
-        /* Tool palette */
         .icon-ui .palette {
             position: absolute;
             width: 12px;
@@ -949,7 +948,6 @@
             box-shadow: 0 25px 80px rgba(0, 212, 170, 0.15);
         }
 
-        /* Project Image Styles */
         .project-image {
             width: 100%;
             height: 250px;
@@ -970,7 +968,6 @@
             transform: scale(1.05);
         }
 
-        /* Project placeholder when no image */
         .project-placeholder {
             position: absolute;
             top: 0;
@@ -997,7 +994,6 @@
             opacity: 0.3;
         }
 
-        /* Hide placeholder when image is present */
         .project-image.has-image .project-placeholder {
             display: none;
         }
@@ -1065,7 +1061,7 @@
             position: relative;
             max-width: 800px;
             margin: 0 auto;
-            height: 450px;
+            height: 500px; /* Increased height to accommodate repositioned arrows */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1156,14 +1152,14 @@
             margin: 0 auto;
         }
 
-        /* Navigation Arrows */
+        /* Navigation Arrows - Repositioned near dots */
         .nav-arrow {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 212, 170, 0.1);
+            bottom: -30px; /* Positioned near the dots */
+            transform: translateY(0);
+            width: 45px;
+            height: 45px;
+            background: rgba(0, 212, 170, 0.2);
             border: 2px solid #00d4aa;
             border-radius: 50%;
             display: flex;
@@ -1172,7 +1168,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 10;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #00d4aa;
             user-select: none;
         }
@@ -1180,22 +1176,22 @@
         .nav-arrow:hover {
             background: #00d4aa;
             color: #1a1f2e;
-            transform: translateY(-50%) scale(1.1);
+            transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
         }
 
         .nav-arrow.prev {
-            left: -80px;
+            left: 30%; /* Positioned to the left of center */
         }
 
         .nav-arrow.next {
-            right: -80px;
+            right: 30%; /* Positioned to the right of center */
         }
 
         /* Slide Indicators Container */
         .progress-container {
             position: absolute;
-            bottom: -60px;
+            bottom: -30px; /* Same level as arrows */
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -1545,6 +1541,14 @@
             .about-content {
                 gap: 60px;
             }
+
+            .nav-arrow.prev {
+                left: 25%;
+            }
+
+            .nav-arrow.next {
+                right: 25%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1556,11 +1560,15 @@
                 display: none;
             }
 
-            /* Mobile Hero Layout - Profile First, Content Second */
+            .hero {
+                padding-top: 140px; /* Adjusted for mobile */
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 3rem;
+                margin-top: 40px; /* Reduced for mobile */
                 grid-template-areas: 
                     "image"
                     "text";
@@ -1632,9 +1640,8 @@
                 gap: 40px;
             }
 
-            /* Mobile Achievements */
             .achievements-slideshow {
-                height: 400px;
+                height: 450px;
             }
 
             .slides-container {
@@ -1662,21 +1669,17 @@
             }
 
             .nav-arrow {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
             }
 
             .nav-arrow.prev {
-                left: -60px;
+                left: 20%;
             }
 
             .nav-arrow.next {
-                right: -60px;
-            }
-
-            .progress-container {
-                bottom: -50px;
+                right: 20%;
             }
 
             .scroll-top {
@@ -1757,17 +1760,17 @@
             }
 
             .nav-arrow {
-                width: 45px;
-                height: 45px;
-                font-size: 1rem;
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
             }
 
             .nav-arrow.prev {
-                left: -50px;
+                left: 15%;
             }
 
             .nav-arrow.next {
-                right: -50px;
+                right: 15%;
             }
 
             .contact-item {
@@ -1783,7 +1786,6 @@
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon has-image">
-                        <!-- Replace with your actual logo image path -->
                         <img src="images\logo.jpg" alt="Logo" class="logo-image">
                         <div class="logo-placeholder">Your Logo Here</div>
                     </div>
@@ -1815,20 +1817,11 @@
                 <div class="hero-text">
                     <h1>HI, I'M RANJITH!<br>SOFTWARE <span class="highlight">DEVELOPER</span></h1>
                     <p>I'm a passionate software developer dedicated to building efficient, scalable, and user-centric applications. With a solid foundation in programming principles and a problem-solving mindset, I specialize in turning complex requirements into robust, maintainable code that powers seamless digital experiences.</p>
-                    <div class="hero-buttons">
-                        <a href="images\Ranjith resume.pdf" class="btn-primary" download="Ranjith_CV.pdf" target="_blank">
-                          Download Resume ↓
-                        </a>
-                    </div>
                 </div>
                 <div class="hero-image">
                     <div class="profile-container">
-                        <!-- Simple Circular Frame -->
                         <div class="main-frame"></div>
-                        
-                        <!-- Profile Image with img tag -->
                         <div class="profile-img has-image">
-                            <!-- Replace with your actual profile image path -->
                             <img src="images\IMG_1507.PNG" alt="Ranjith Profile" class="profile-image">
                             <div class="profile-placeholder">Add Your Profile Image Here</div>
                         </div>
@@ -1864,7 +1857,13 @@
                             <h4>HSC</h4>
                             <div class="institution">Thanthai Roever Higher Secondary school</div>
                             <div class="year">2022-compeleted</div>
+                          
                         </div>
+                          <div class="hero-buttons">
+                              <a href="images\Ranjith resume.pdf" class="btn-primary" download="Ranjith_CV.pdf" target="_blank">
+                                 Download Resume ↓
+                              </a>
+                          </div>
                     </div>
                 </div>
 
@@ -1992,7 +1991,6 @@
                 <!-- Project 1 -->
                 <div class="project-card fade-in">
                     <div class="project-image has-image">
-                        <!-- Replace with your actual project image path -->
                         <img src="images\WhatsApp Image 2024-09-11 at 10.15.25_180cafc6.jpg" alt="Fitness Platform" class="project-img">
                         <div class="project-placeholder">Project Image</div>
                     </div>
@@ -2012,7 +2010,6 @@
                 <!-- Project 2 -->
                 <div class="project-card fade-in">
                     <div class="project-image has-image">
-                        <!-- Replace with your actual project image path -->
                         <img src="images\network topology.png" alt="Network topology" class="project-img">
                         <div class="project-placeholder">Project Image</div>
                     </div>
@@ -2031,7 +2028,6 @@
                 <!-- Project 3 -->
                 <div class="project-card fade-in">
                     <div class="project-image has-image">
-                        <!-- Replace with your actual project image path -->
                         <img src="images\Screenshot 2025-06-22 120533.png" alt="Portfolio Website" class="project-img">
                         <div class="project-placeholder">Project Image</div>
                     </div>
@@ -2077,8 +2073,8 @@
                     <div class="achievement-slide">
                         <div class="achievement-number">2</div>
                         <div class="achievement-year">2024</div>
-                        <h3 class="achievement-title">Smart Innovator Hackathon Winner – Fit-Tech AI</h3>
-                        <p class="achievement-description"><strong>Fit-Tech AI</strong> won the 2024 Smart Innovator Hackathon conducted by JJ College. The platform leverages AI for real-time workout analysis, personalized fitness feedback, and injury prevention. Competing against top teams, we showcased innovation in health-tech and secured the winner's title with high appreciation from the jury.</p>
+                        <h3 class="achievement-title">Smart Innovator Hackathon Winner</h3>
+                        <p class="achievement-description"><strong>Fit-Tech AI</strong> won the 2024 Smart Innovator Hackathon at JJ College for its AI-driven workout analysis and personalized fitness feedback, earning high praise from the jury.</p>
                         <p><i>-JJ college ,Trichy,TamilNadu</i></p>
                     </div>
 
@@ -2087,7 +2083,7 @@
                         <div class="achievement-number">3</div>
                         <div class="achievement-year">2024</div>
                         <h3 class="achievement-title">MumbaiHacks 2024 – Guinness World Record Hackathon</h3>
-                        <p class="achievement-description">Participated in <strong>MumbaiHacks 2024</strong>, the world's largest hackathon that earned a Guinness World Record. It was an extraordinary experience to be part of such a massive global event. I developed an innovative project in the healthcare domain, contributing to impactful tech solutions addressing real-world health challenges.</p>
+                        <p class="achievement-description">Participated in <strong>MumbaiHacks 2024</strong>, the world's largest hackathon, was a Guinness World Record event. I developed a healthcare project, contributing to impactful tech solutions for real-world health challenges.</p>
                         <p><i>-Skill Tech University,Mumbai</i></p>
                     </div>
 
@@ -2096,7 +2092,7 @@
                         <div class="achievement-number">4</div>
                         <div class="achievement-year">2025</div>
                         <h3 class="achievement-title">Best Innovator Award – Thiran'25</h3>
-                        <p class="achievement-description">Participated in <strong>Thiran'25</strong>, a national-level tech fest conducted by Sri Eshwar College. Our team presented a cutting-edge fitness project under the Fit-Tech AI initiative and was honored with the <strong>Best Innovator Award</strong>. The event provided a great platform to showcase our innovation in fitness technology and gain valuable recognition.</p>
+                        <p class="achievement-description">Participated in <strong>Thiran'25</strong>, tech fest, Sri Eshwar College—our Fit-Tech AI project earned the <strong>Best Innovator Award</strong> for its cutting-edge fitness tech.</p>
                         <p><i>-Sri Eshwar college,Coimbatore,TamilNadu</i></p>
                     </div>
                 </div>
@@ -2153,15 +2149,15 @@
                             <div class="contact-icon">💼</div>
                             <h3>LinkedIn</h3>
                         </div>
-                        <p><a href="https://www.linkedin.com/in/rranjith2004/" target="_blank">linkedin.com/in/rranjith2004</a><br>Let's connect professionally</p>
+                        <p><a href="https://www.linkedin.com/in/rranjith2004/" target="_blank">LinkedIn</a><br>Let's connect professionally</p>
                     </div>
 
-                    <div class="contact-item fade-in" onclick="window.open('https://github.com/rranjith2004', '_blank')">
+                    <div class="contact-item fade-in" onclick="window.open('https://github.com/Ranjith118', '_blank')">
                         <div class="contact-item-header">
                             <div class="contact-icon">💻</div>
                             <h3>GitHub</h3>
                         </div>
-                        <p><a href="https://github.com/rranjith2004" target="_blank">github.com/rranjith2004</a><br>Check out my code repositories</p>
+                        <p><a href="https://github.com/Ranjith118" target="_blank">GITHUB</a><br>Check out my code repositories</p>
                     </div>
                 </div>
 
@@ -2205,7 +2201,7 @@
                     <a href="https://www.linkedin.com/in/rranjith2004/" target="_blank" class="social-link" title="LinkedIn">
                         💼
                     </a>
-                    <a href="https://github.com/rranjith2004" target="_blank" class="social-link" title="GitHub">
+                    <a href="https://github.com/Ranjith118" target="_blank" class="social-link" title="GitHub">
                         💻
                     </a>
                     <a href="tel:+917904374005" class="social-link" title="Phone">
@@ -2214,7 +2210,8 @@
                 </div>
                 <div class="copyright">
                     <p>&copy; 2025 <a href="#home">Ranjith</a>. All rights reserved.</p>
-                    <p>Designed & Developed with by <a href="#home">Ranjith</a></p>
+                    <p>Designed & Developed with ❤️ by <a href="#home">Ranjith</a></p>
+                    <p>Creative Coder & UI/UX Designer</p>
                 </div>
             </div>
         </div>
@@ -2492,10 +2489,10 @@
             type();
         }
 
-        // Initialize typing effect when page loads
+        // Initialize typing effect when page loads - Updated text
         window.addEventListener('load', function() {
             const heading = document.querySelector('.hero-text h1');
-            const originalText = 'HI, I\'M RANJITH!<br>CREATIVE <span class="highlight">CODER</span>';
+            const originalText = 'HI, I\'M RANJITH!<br>SOFTWARE <span class="highlight">DEVELOPER</span>';
             setTimeout(() => {
                 typeWriter(heading, originalText, 80);
             }, 500);
